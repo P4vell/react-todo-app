@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  @apply bg-primary text-primary;
+  --color-gradient-start: hsl(192, 100%, 67%);
+  --color-gradient-end: hsl(280, 87%, 65%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+
+.light {
+  --color-bg-primary: hsl(0, 0%, 98%);
+  --color-bg-secondary: hsl(0, 0%, 100%);
+  --color-border-primary: hsl(236, 33%, 92%);
+  --color-text-primary: hsl(235, 19%, 35%);
+  --color-text-secondary: hsl(236, 9%, 61%);
+  --color-text-accent: hsl(233, 11%, 84%);
+  --color-button-accent: hsl(220, 98%, 61%);
+}
+
+.dark {
+  --color-bg-primary: hsl(235, 21%, 11%);
+  --color-bg-secondary: hsl(235, 24%, 19%);
+  --color-text-primary: hsl(234, 39%, 85%);
+  --color-text-secondary: hsl(234, 11%, 52%);
+  --color-button-accent: hsl(220, 98%, 61%);
 }
